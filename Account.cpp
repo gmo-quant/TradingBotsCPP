@@ -46,7 +46,9 @@ Account<T>::Account(double totalBalance,
 	_netAssetValue(_marginUsed + _marginAvailable),
 	_amountAvailableRatio (_marginAvailable / _totalBalance),
 	_hash (calcHashCode())
-	{}
+	{
+		cout << _hash << endl;;
+	}
 
 
 /* does c++ provide hashcode? */
@@ -54,13 +56,15 @@ template<typename T>
 int Account<T>::calcHashCode(){
 		const int prime = 31;
 		int result = 1;
-		result = prime * result + 10;
-				// ((_accountID == nullptr) ? 0 : _accountID.)
+		std::hash<T> hv;
+		result = prime * result + hv(_accountID);
+				// ((_accountID == nullptr) ? 
+				// 	0 : std::hash<T>(_accountID) );
 	return result;		
 }
 
 static void testInitialization(){
-	Account<string> account(123.0, 123.0, "USD", "123345", 345.0 );
+	Account<string> account(123.0, 123.0, "USD", "101-001-8531924-001", 345.0 );
 	ASSERT_APPROX_EQUAL(account.totalBalance() , 123.0, 0.001);
 	ASSERT_APPROX_EQUAL(account.marginAvailable() , 123.0, 0.001);
 }
