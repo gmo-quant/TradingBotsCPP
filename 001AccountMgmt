@@ -1,0 +1,6 @@
+this is the sequence of the developing order.
+manage account attribute provided by brokerage platform.
+
+
+1. package com.precioustech.fxtrading.account; 
+class Account
