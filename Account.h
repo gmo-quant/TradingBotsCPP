@@ -69,12 +69,14 @@ private:
 	const double _marginRate; // the leverage offered on this account, 
 								//for e.g. 0.05, 0.1 etc
 	const double _netAssetValue;
-	 // std::string _toStr;
+	
 	const double _amountAvailableRatio; // the amount available to trade as 
 									// a fraction of total amount
 	const int _hash;
+	const std::string _toStr;
 
 	int calcHashCode();
+	std::string toStr();
 };
 
 void testAccount();

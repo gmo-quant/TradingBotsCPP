@@ -45,10 +45,9 @@ Account<T>::Account(double totalBalance,
 	_marginRate (marginRate),
 	_netAssetValue(_marginUsed + _marginAvailable),
 	_amountAvailableRatio (_marginAvailable / _totalBalance),
-	_hash (calcHashCode())
-	{
-		cout << _hash << endl;;
-	}
+	_hash (calcHashCode()),
+	_toStr(toStr())
+	{}
 
 
 /* does c++ provide hashcode? */
@@ -61,6 +60,11 @@ int Account<T>::calcHashCode(){
 				// ((_accountID == nullptr) ? 
 				// 	0 : std::hash<T>(_accountID) );
 	return result;		
+}
+template<typename T>
+string Account<T>::toStr(){
+	// use string format to describe the value of each attributes
+	return "test";
 }
 
 static void testInitialization(){
