@@ -59,8 +59,13 @@ int Account<T>::calcHashCode(){
 	return result;		
 }
 
-
-void testAccount(){
+static void testInitialization(){
 	Account<string> account(123.0, 123.0, "USD", "123345", 345.0 );
+	ASSERT_APPROX_EQUAL(account.totalBalance() , 123.0, 0.001);
+	ASSERT_APPROX_EQUAL(account.marginAvailable() , 123.0, 0.001);
+}
+void testAccount(){
+	TESTCase(Account);
+	TEST(testInitialization);
 }
 

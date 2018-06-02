@@ -22,6 +22,41 @@ public:
 			std::string currency,
 			T accountID, 
 			double marginRate);
+
+	double amountAvailableRatio() const{
+		return _amountAvailableRatio;
+	}
+	double marginRate() const{
+		return _marginRate;
+	}
+	T accountID() const{
+		return _accountID;
+	}
+	std::string currency() const{
+		return _currency;
+	}
+	double netAssetValue() const{
+		return _netAssetValue;
+	}
+	double totalBalance() const{
+		return _totalBalance;
+	}
+	double unrealisePnL() const{
+		return _unrealisePnL;
+	}
+	double realisePnL() const{
+		return _realisePnL;
+	}
+	double marginUsed() const{
+		return _marginUsed;
+	}
+	double marginAvailable(){
+		return _marginAvailable;
+	}
+	long openTrades(){
+		return _openTrades;
+	}
+
 private:
 	const double _totalBalance;
 	const double _unrealisePnL; // Profit & Loss
