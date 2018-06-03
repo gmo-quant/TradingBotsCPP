@@ -1,9 +1,13 @@
 #pragma once
 #include "stdafx.h"
 
-/*
-	use Template
-
+/**
+ * 	holds account information
+ *	use Template
+ *	no setters will be provided, 
+ *	the private const variable will 
+ *	be initialized through the constructors.
+ *
  */
 template <typename T>
 class Account{

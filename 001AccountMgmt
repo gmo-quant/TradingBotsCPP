@@ -3,4 +3,8 @@ manage account attribute provided by brokerage platform.
 
 
 1. package com.precioustech.fxtrading.account; 
-class Account
+C++ :  class Account{};
+
+2. interface AccountDataProvider
+c++ : class AccountDataProvider
+
