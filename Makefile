@@ -1,4 +1,5 @@
 # Automated Makefile
+# it works only on a single directory
 
 CC = g++
 CFLAGS = -Wall -Werror -D_GLIBCXX_DEBUG -std=c++11 -g
