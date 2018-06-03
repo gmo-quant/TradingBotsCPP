@@ -32,6 +32,15 @@
 *.app
 # .gitignore 
 .gitignore
+# cmake generated files 
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.cmake
+CMakeCache.txt
+CMakeLists.txt
+cmake_install.cmake
+CMakeFiles/*
 
 001specificationNdesign
 001AccountMgmt
