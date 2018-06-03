@@ -1,0 +1,5 @@
+custom specialization of std::hash
+http://en.cppreference.com/w/cpp/utility/hash
+
+templates in cpp
+https://www.geeksforgeeks.org/templates-cpp/

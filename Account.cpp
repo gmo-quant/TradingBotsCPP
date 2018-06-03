@@ -55,16 +55,30 @@ template<typename T>
 int Account<T>::calcHashCode(){
 		const int prime = 31;
 		int result = 1;
-		std::hash<T> hv;
-		result = prime * result + hv(_accountID);
+		std::hash<T> hash_fn;
+		result = prime * result + hash_fn(_accountID);
 				// ((_accountID == nullptr) ? 
 				// 	0 : std::hash<T>(_accountID) );
 	return result;		
 }
 template<typename T>
 string Account<T>::toStr(){
-	// use string format to describe the value of each attributes
-	return "test";
+	// use string stream to describe the value of each attributes
+	// and make string formatting easier
+	ostringstream ss;
+	ss << "Currency = " << _currency 
+		<< " NAV = " << setw(5) << setprecision(2) << _netAssetValue
+		<< " Total Balance = " << setw(5) << setprecision(2) << _totalBalance
+		<< " UnrealisePnL = " << setw(5) << setprecision(2) << _unrealisePnL
+		<< " RealisePnL = " << setw(5) << setprecision(2) << _realisePnL
+		<< " MarginUsed = " << setw(5) << setprecision(2) << _marginUsed 
+		<< " MarginAvailable = " << setw(5) << setprecision(2) << _marginAvailable
+		<< " OpenTrades = " << setw(5) << setprecision(2) << _openTrades
+		<< " AmountAvailableRatio = " << setw(5) << setprecision(2) << _amountAvailableRatio
+		<< " MarginRate = " << setw(5) << setprecision(2) << _marginRate
+		<< " "
+		<< endl;
+	return ss.str();
 }
 
 static void testInitialization(){
