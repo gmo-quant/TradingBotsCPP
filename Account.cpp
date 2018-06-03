@@ -57,6 +57,7 @@ int Account<T>::calcHashCode(){
 		int result = 1;
 		std::hash<T> hash_fn;
 		result = prime * result + hash_fn(_accountID);
+				// the following  doesn't work 
 				// ((_accountID == nullptr) ? 
 				// 	0 : std::hash<T>(_accountID) );
 	return result;		

@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+# .gitignore 
+.gitignore
+
+001specificationNdesign
+001AccountMgmt
+learning_C++
+onadaRESTfulAPI
+TODO

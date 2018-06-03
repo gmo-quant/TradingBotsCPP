@@ -1,5 +1,23 @@
+
+=============================
+codes : 
+==============================
+
+:= Account::equals(Object obj) : in java it is easy to override this method, but how in c++, or is there another manner to reach the same functionality?
+
+done := Account::toStr() : implement string formatting, using ostringstream
+
+done := Account::calcHashCode() : 
+	use std::hash to create hash code of _accountID of type T
+	type T should have override the std::hash 
+
+===============================
+reading materials:
+===============================
+
 custom specialization of std::hash
 http://en.cppreference.com/w/cpp/utility/hash
 
 templates in cpp
 https://www.geeksforgeeks.org/templates-cpp/
+

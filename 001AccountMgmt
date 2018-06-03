@@ -2,9 +2,21 @@ this is the sequence of the developing order.
 manage account attribute provided by brokerage platform.
 
 
-1. package com.precioustech.fxtrading.account; 
-C++ :  class Account{};
+<1>:. com.precioustech.fxtrading.account; 
+	C++ :  Pro_TradingBotsCPP/Account.cpp
 
-2. interface AccountDataProvider
-c++ : class AccountDataProvider
+<2>:. interface AccountDataProvider
+	c++ : Pro_TradingBotsCPP/AccountDataProvider.cpp
 
+<3>:. a concrete implementation for AccountDataProvider
+
+	java: book-code/java/oanda-restapi/src/main/java/com/precioustech/fxtrading/oanda/restapi/OandaJsonKeys.java
+	java: book-code/java/oanda-restapi/src/main/java/com/precioustech/fxtrading/oanda/restapi/OandaConstants.java 
+	java: book-code/java/oanda-restapi/src/main/java/com/precioustech/fxtrading/oanda/restapi/account/OandaAccountDataProviderService.java
+
+	C++: Pro_TradingBotsCPP/restAPI/OnadaJsonKeys.h : public static const data members
+	c++: Pro_TradingBotsCPP/restAPI/OandaConstants.h : public static const data members
+	c++: Pro_TradingBotsCPP/restAPI/OandaAccountDataProviderService.cpp
+
+	we are using API provided by a certain platform,
+	so we can provide a platform related implementation 

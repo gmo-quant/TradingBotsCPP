@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+#include "includes/stdafx.h"
 #include "Account.h"
 
 
@@ -20,7 +20,8 @@ public:
 	 */
 	virtual Account<T> lastestAccountInfo(T accountID) const= 0;
 	/**
+	 * use set because account should be unique
 	 * @return A collection of All account available
 	 */
-	// virtual Collection< Account<T> > lastestAccountInfo() const = 0;
+	virtual std::set< Account<T> > lastestAccountInfo() const = 0;
 };
