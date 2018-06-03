@@ -3,9 +3,9 @@
 
 CC = g++
 CFLAGS = -Wall -Werror -D_GLIBCXX_DEBUG -std=c++11 -g
-CFLAGS += -L /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/restAPI/Oanda/
-CFLAGS += -I /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/restAPI/Oanda/
-CFLAGS += -I /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/includes/
+# CFLAGS += -L /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/restAPI/Oanda/
+# CFLAGS += -I /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/restAPI/Oanda/
+# CFLAGS += -I /c/Users/quanf/OneDrive/Quant_Fin/Pro_TradingBotsCPP/includes/
 
 
 COMPILE = $(CC) $(CFLAGS) -c

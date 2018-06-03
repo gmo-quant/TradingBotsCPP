@@ -6,7 +6,6 @@
  */
 class OandaJsonKeys{
 public:
-	OandaJsonKeys(){}
 	// static data member can only be initialized at its definition
 	static const std::string account;
 	static const std::string accountID;
@@ -63,7 +62,8 @@ public:
 	// static const std::string
 	// static const std::string
 	// static const std::string
-
+private:
+	OandaJsonKeys(){}
 };
 
 void testOandaJsonKeys();
